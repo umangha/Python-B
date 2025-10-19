@@ -1,0 +1,5 @@
+Package     Version
+----------- -------
+pip         24.3.1
+prettytable 3.12.0
+wcwidth     0.2.13
