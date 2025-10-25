@@ -13,9 +13,9 @@ class Player(Turtle): # Inheriting the Turtle Class
         self.color("white")
         self.seth(DIRECTION) # Make the Turtle Face UP
         self.penup() # Stop Drawing the line
-        self.start_pos()
+        self.go_to_start_pos()
     
-    def start_pos(self):
+    def go_to_start_pos(self):
         '''Turtle goes to the starting position'''
         self.goto(STARTING_POSITION)
     
@@ -29,3 +29,9 @@ class Player(Turtle): # Inheriting the Turtle Class
         #     # Move the turtle to the new position
         #     self.goto(self.xcor(),new_y)
         self.forward(MOVE_DISTANCE)
+
+    def is_at_finish_line(self):
+        if self.ycor() > FINISH_LINE_Y:
+            return True
+        else:
+            return False
