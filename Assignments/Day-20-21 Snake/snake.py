@@ -75,3 +75,14 @@ class Snake:
         '''Set the turtle head in right direction = 0deg '''
         if self.head.heading() != LEFT:
             self.head.setheading(RIGHT)
+
+    def reset(self):
+        '''Snake reset after adding highscore'''
+        # To remove the prev snake from the screen
+        for seg in self.segments:
+            seg.goto(1000,1000)
+        
+        self.segments.clear() # Empty the list
+        self.create_snake()
+        # Holds the head of the snake
+        self.head = self.segments[0]
